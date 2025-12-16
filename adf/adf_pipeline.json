@@ -1,0 +1,20 @@
+{
+  "name": "ELT_Synapse",
+  "activities": [
+    {
+      "name": "CopyToSynapse",
+      "type": "Copy",
+      "typeProperties": {
+        "source": { "type": "DelimitedTextSource" },
+        "sink": { "type": "SqlSink" }
+      },
+      "inputs": [{ "referenceName": "adls_raw_sales" }],
+      "outputs": [{ "referenceName": "synapse_curated_sales" }]
+    },
+    {
+      "name": "dbtRun",
+      "type": "Custom",
+      "typeProperties": { "command": "dbt run" }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+name: "azure_synapse_elt"
+version: "1.0.0"
+profile: "azure_synapse"
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target"]

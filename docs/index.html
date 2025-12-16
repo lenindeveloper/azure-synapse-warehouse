@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Azure Synapse ELT Demo</title>
+  <style>
+    body{margin:0;background:#0a0a0a;color:#f5f5f7;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif}
+    .wrap{max-width:960px;margin:0 auto;padding:24px}
+    .title{font-size:26px;margin-bottom:8px}
+    .sub{color:#a1a1a6}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+    .card{background:#11173a;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:16px;text-align:center}
+    .n{font-size:12px;color:#a1a1a6}
+    .v{font-size:24px;color:#fff;margin-top:6px}
+    .chart{margin-top:24px;background:#11173a;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:16px}
+    .bar{display:flex;align-items:flex-end;gap:12px;height:180px}
+    .col{width:36px;background:#2997ff;border-radius:8px}
+    .legend{display:flex;gap:12px;margin-top:12px;color:#a1a1a6}
+    .badge{padding:6px 10px;border:1px solid rgba(255,255,255,0.15);border-radius:8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="title">Azure Synapse ELT Demo</div>
+    <div class="sub">Raw → ADLS Gen2 → ADF Copy → Synapse curated → dbt models</div>
+
+    <div class="grid">
+      <div class="card"><div class="n">Raw files</div><div class="v">5,120</div></div>
+      <div class="card"><div class="n">Curated rows</div><div class="v">2.4M</div></div>
+      <div class="card"><div class="n">dbt tests pass</div><div class="v">99.2%</div></div>
+    </div>
+
+    <div class="chart">
+      <div class="n">Sales by Month</div>
+      <div class="bar">
+        <div class="col" style="height:60%"></div>
+        <div class="col" style="height:75%"></div>
+        <div class="col" style="height:88%"></div>
+        <div class="col" style="height:95%"></div>
+        <div class="col" style="height:100%"></div>
+      </div>
+      <div class="legend">
+        <span class="badge">Jan</span><span class="badge">Feb</span><span class="badge">Mar</span><span class="badge">Apr</span><span class="badge">May</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
